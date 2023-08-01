@@ -1,5 +1,5 @@
 # Configure a Custom Azure RBAC Role
-Step by step guide for creating a custom RBAC role using a definition stored in a JSON file
+by step guide for creating a custom RBAC role using a definition stored in a JSON file
 
 Login into https://portal.azure.com and open a Azure CLI PowerShell session.
 
