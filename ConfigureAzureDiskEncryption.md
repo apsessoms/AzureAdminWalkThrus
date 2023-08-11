@@ -4,7 +4,7 @@ This guide walks you through the process of configuring Azure Disk Encryption, e
 
 ## Prerequisites
 
-- An active Azure account.
+- An active Azure Subscription.
 - An existing Virtual Machine (VM) in your Azure environment.
 
 ## Step 1: Access Key Vault
