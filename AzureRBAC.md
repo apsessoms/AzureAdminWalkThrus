@@ -1,44 +1,60 @@
-# Configure a Custom Azure RBAC Role
-Step by step guide for creating a custom RBAC role using a definition stored in a JSON file
+# Configure a Custom Azure RBAC Role: A Step-by-Step Guide
 
-Login into https://portal.azure.com and open a Azure CLI PowerShell session.
+This guide explains how to create a custom Role-Based Access Control (RBAC) role in Azure using a definition stored in a JSON file.
 
-I used a a **JSON** file with a custom role defined already and uploaded it within this PowerShell session. 
+## Prerequisites
 
-![image](https://github.com/apsessoms/AzureCustomRBACRole/assets/99392512/c07edc4f-6223-4891-8bc5-ef25297f053e)
+- An active Azure Subscription.
+- A JSON file with the custom role defined.
 
-Once the file successfully uploaded, you should see a similar message like the one in the screenshot below:
+## Step 1: Access Azure Portal
 
-![image](https://github.com/apsessoms/AzureCustomRBACRole/assets/99392512/e506bbfb-c754-4317-a472-adef625a5a53)
+1. Log in to the [Azure Portal](https://portal.azure.com).
+2. Open an Azure CLI PowerShell session.
 
-To open the file in the PowerShell sessions type #code ./ (name of your file) or refer to screenshot below:
+## Step 2: Upload JSON File
 
-![image](https://github.com/apsessoms/AzureCustomRBACRole/assets/99392512/b5fa55a6-9bff-42ce-9fa0-5070ddd43611)
+1. Upload the JSON file containing your custom role within the PowerShell session.
 
-The file edit will open up and you will need to **edit to assignable scope section.** If you do not fill in a **subscription ID**, it will not work. You can enter **multiple subscriptions** (or resource groups, management groups etc). Just make sure you separate them with commas.
+   ![Upload JSON File](https://github.com/apsessoms/AzureCustomRBACRole/assets/99392512/c07edc4f-6223-4891-8bc5-ef25297f053e)
 
-![image](https://github.com/apsessoms/AzureCustomRBACRole/assets/99392512/9ead8eda-190b-449e-9161-6afb9535bf94)
+2. Confirm successful upload by checking for a message like the one below:
 
-Now you will create a new role in the CloudShell using the **JSON file we just altered.** 
+   ![Successful Upload](https://github.com/apsessoms/AzureCustomRBACRole/assets/99392512/e506bbfb-c754-4317-a472-adef625a5a53)
 
-![image](https://github.com/apsessoms/AzureCustomRBACRole/assets/99392512/87db142f-c5a5-42a0-9348-315e32f04ece)
+## Step 3: Edit JSON File
 
-That error message was a result of my not elevating my privileged access. Did a quick refresh and then ran the command again...success!
+1. Open the file in the PowerShell session using `#code ./<filename>`.
 
-![image](https://github.com/apsessoms/AzureCustomRBACRole/assets/99392512/71c45228-c98d-4e10-bed7-c8f16c42e3d8)
+   ![Open File](https://github.com/apsessoms/AzureCustomRBACRole/assets/99392512/b5fa55a6-9bff-42ce-9fa0-5070ddd43611)
 
-This means the custome role is now available for use within the subscription we defined (my cloudbox subscription). So let's say we want to add a **role** to a virtual machine. **Remember roles are for permissions**. Click on the Virtual Machine and click on IAM. 
+2. Edit the **assignable scope section**.
+3. Fill in the **subscription ID** (multiple subscriptions can be entered, separated by commas).
 
-![image](https://github.com/apsessoms/AzureCustomRBACRole/assets/99392512/bec6de7e-5402-4e82-8c2c-552149404f97)
+   ![Edit Scope](https://github.com/apsessoms/AzureCustomRBACRole/assets/99392512/9ead8eda-190b-449e-9161-6afb9535bf94)
 
-You will then click on the **filter button** and select **custom role** and there will list all the custom roles available.
+## Step 4: Create New Role
 
-![image](https://github.com/apsessoms/AzureCustomRBACRole/assets/99392512/fefc8269-8c5f-4928-83de-c3b5c17ae120)
+1. Create a new role in the CloudShell using the altered JSON file.
 
-You should see that custom role that we just created. 
+   ![Create Role](https://github.com/apsessoms/AzureCustomRBACRole/assets/99392512/87db142f-c5a5-42a0-9348-315e32f04ece)
 
-![image](https://github.com/apsessoms/AzureCustomRBACRole/assets/99392512/bae96f6e-b62a-4acc-9773-f46aa1e0ec8a)
+2. If an error occurs, try refreshing and re-running the command.
 
-**It is important to note that you can assign the scope to cover the entire subscription or you can narrow it down to certain resources. To do that, it must start at the parent subscription first, and then you must identify the specific resource group.** 
+   ![Success](https://github.com/apsessoms/AzureCustomRBACRole/assets/99392512/71c45228-c98d-4e10-bed7-c8f16c42e3d8)
 
-![image](https://github.com/apsessoms/AzureCustomRBACRole/assets/99392512/4e7a50e9-f655-4d1b-97f9-6f61b685fc47)
+## Step 5: Assign Custom Role
+
+1. Navigate to a virtual machine and click on "IAM."
+2. Click on the **filter button** and select **custom role** to list all available custom roles.
+3. Select the custom role you just created.
+
+   ![Assign Role](https://github.com/apsessoms/AzureCustomRBACRole/assets/99392512/bae96f6e-b62a-4acc-9773-f46aa1e0ec8a)
+
+**Note**: You can assign the scope to cover the entire subscription or narrow it down to certain resources. Start at the parent subscription, and then identify the specific resource group.
+
+![Scope Assignment](https://github.com/apsessoms/AzureCustomRBACRole/assets/99392512/4e7a50e9-f655-4d1b-97f9-6f61b685fc47)
+
+---
+
+I hope this organized guide is helpful! Let me know if there are any additional details or changes you'd like me to make.
