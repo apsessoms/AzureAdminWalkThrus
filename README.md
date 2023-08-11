@@ -1,6 +1,6 @@
 # Azure Admin Walk Throughs 🌐☁️
 
-Welcome to Azure Admin Walk Throughs! This project provides easy-to-follow walk-through guides for Azure Admins, helping you navigate the vast world of Azure with ease and confidence. These guides are designed to assist with common administrative tasks as well as keep me accountable while I study for AZ-104! 💼🚀
+Welcome to Azure Admin Walk Throughs! This project provides easy-to-follow walk-through guides for Azure Admins, helping you navigate the vast world of Azure with ease and confidence. These guides are designed to assist with common administrative tasks as well as keep me accountable while I study for AZ-104. 💼🚀
 
 ## Requirements 📋
 
