@@ -1,47 +1,50 @@
-# Configuring Uniform Virtual Machine Scale Sets
+# Configuring Uniform Virtual Machine Scale Sets (VMSS): A Step-by-Step Guide
 
-Head over to https://www.portal.azure.com and type in VMSS for Virtual Machine Scale Sets in ths search bar. 
+## Step 1: Access VMSS in Azure Portal
+1. Go to [Azure Portal](https://www.portal.azure.com).
+2. Search for "VMSS" in the search bar for Virtual Machine Scale Sets.
 
-Click Create and name the resource group as well as the scale set. Try to use a naming schema that you are familiar with. 
+## Step 2: Create VMSS Resource Group
+1. Click "Create."
+2. Name the resource group and the scale set, using a familiar naming schema.
 
-![image](https://github.com/apsessoms/AzureAdminWalkThrus/assets/99392512/0204037c-69a7-4516-a95f-fc37d5a96098)
+   ![Resource Group](https://github.com/apsessoms/AzureAdminWalkThrus/assets/99392512/0204037c-69a7-4516-a95f-fc37d5a96098)
 
+3. Note that you can have regional deployments or pin across multiple availability zones.
 
-[def]: image-1.png
+   ![Deployment Options](https://github.com/apsessoms/AzureAdminWalkThrus/assets/99392512/e8c8fd91-83ba-40da-ab38-99247967981e)
 
-It is important to remember that with VMSS that you can have <u>regional deployments </u> OR you can <u>pin it across multiple availability zones.</U>
+## Step 3: Configure VM Standards
+- Define the standards for VMSS instances (similar to configuring a virtual machine).
 
-![image](https://github.com/apsessoms/AzureAdminWalkThrus/assets/99392512/e8c8fd91-83ba-40da-ab38-99247967981e)
+   ![VM Configuration](https://github.com/apsessoms/AzureAdminWalkThrus/assets/99392512/baf5b85b-3e9f-4eba-b1f5-bbea16ae2247)
 
+## Step 4: Set Disk and Networking Information
+1. Keep the disk information the same.
+2. Deploy to an existing virtual network and modify the NIC definition.
+3. Set NIC network security group to "None" if VNET already has one.
+4. Public IP addresses are usually disabled (use a load balancer).
 
-If you will notice, this is the same as configuring a virtual machine. The only difference is that we are defining the standards for our VM scale set instances. 
+   ![Networking Configuration](https://github.com/apsessoms/AzureAdminWalkThrus/assets/99392512/12350f23-f9b7-46c0-ac69-5429ce59a4d8)
 
-![image](https://github.com/apsessoms/AzureAdminWalkThrus/assets/99392512/baf5b85b-3e9f-4eba-b1f5-bbea16ae2247)
+## Step 5: Skip Load Balancer Selection
+- For demonstration, do not select "Azure Load Balancer."
 
+   ![Skip Load Balancer](https://github.com/apsessoms/AzureAdminWalkThrus/assets/99392512/8ff6a6ee-4231-42e8-a110-77bce5231805)
 
-Click next and keep the disk information the same. On *Networking* we will deploy to an existing virtual network. We will modify the definition of the network interface card. 
+## Step 6: Set Instance Count and Scaling Policy
+1. Set the initial instance count to 0.
+2. Leave the scaling policy at Manual scaling.
+3. Review and create the VMSS.
 
-![image](https://github.com/apsessoms/AzureAdminWalkThrus/assets/99392512/00a41b18-9d7a-4c4f-9adf-97550f4515f6)
+   ![Instance Configuration](https://github.com/apsessoms/AzureAdminWalkThrus/assets/99392512/1d87742f-b378-48be-92ec-b2efffdb9732)
 
+## Step 7: Update Instance Count
+1. Change the instance count from 0 to 2 and click "Save."
+2. Click on "Instances" to view the created or running VMSS.
 
-Please note the NIC network security group setting is set to *"None"* because this VNET already has one. By default, Public IP addresses are <u>disabled</u> and this is because you will need to use a load balancer in front of it. It is the central access point into the solution that you're hosting. Each VMSS will have a public ip address. 
+   ![View Instances](https://github.com/apsessoms/AzureAdminWalkThrus/assets/99392512/2324543b-d082-4679-ab8a-bead8aaa7318)
 
-![image](https://github.com/apsessoms/AzureAdminWalkThrus/assets/99392512/12350f23-f9b7-46c0-ac69-5429ce59a4d8)
+---
 
-
-For demonstration purposes...even though it might be tempting...*do not select Azure Load Balancer* on the next screen. 
-
-![image](https://github.com/apsessoms/AzureAdminWalkThrus/assets/99392512/8ff6a6ee-4231-42e8-a110-77bce5231805)
-
-
-We will set the initial instance count to 0 so that we don't have any instances up and running when we actually create the scale set. Let's also leave the scaling polocy at Manual scaling for now. Click on review and create. 
-
-![image](https://github.com/apsessoms/AzureAdminWalkThrus/assets/99392512/1d87742f-b378-48be-92ec-b2efffdb9732)
-
-
-From here, lets change that number from 0 to 2 and click save. Then on your left hand menu, click on instances. You should see two VMSSS being created or already running. 
-
-![image](https://github.com/apsessoms/AzureAdminWalkThrus/assets/99392512/2324543b-d082-4679-ab8a-bead8aaa7318)
-
-
-These instances were created based on the definition we created for our scale set. The size, the disks, the networking parameters, etc. These two VMSS have those mirror configurations and thats why we use scale sets. It is easy to create instances quickly that are for serving the same purpose. 
+By following these steps, you can efficiently configure Uniform Virtual Machine Scale Sets in Azure. VMSS allows you to create quickly mirrored instances that serve the same purpose, facilitating scalability and uniformity in your virtual environment.
