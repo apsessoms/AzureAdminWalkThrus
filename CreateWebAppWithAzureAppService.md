@@ -10,7 +10,8 @@ Think of this as creating the underlying infrastructure for the Web Application,
 ### Step 3: Configure Your Web App 🛠️
 1. **Subscription**: Choose your subscription plan.
 
-![Alt text](image-1.png)
+![image](https://github.com/apsessoms/AzureAdminWalkThrus/assets/99392512/9d175797-c0ff-4cfb-bfa2-a8ada4cd34e2)
+
 
 
 2. **Resource Group**: Click on "Create new" and give it a name, or select an existing one.
@@ -22,7 +23,8 @@ Think of this as creating the underlying infrastructure for the Web Application,
 ### Step 4: Select App Service Plan and Sku 📝
 1. Click on "Explore pricing plans" under the **Pricing Tier**.
 
-![Alt text](image-2.png)
+![image](https://github.com/apsessoms/AzureAdminWalkThrus/assets/99392512/8168b7a3-ec7f-49a3-8c85-d95595d2cbfd)
+
 
 2. You can choose a dev/test plan or a production plan, depending on your needs. For this lab, we will choose Basic B1 to keep costs low. 
 3. Click "Apply."
@@ -34,17 +36,20 @@ Think of this as creating the underlying infrastructure for the Web Application,
 3. **Region**: It is always best to deploy apps to the same application service plan, and the same resource group, and they have to be in the region. 
 4. **Create**: Click review and create. 
 
-![Alt text](image-3.png)
+![image](https://github.com/apsessoms/AzureAdminWalkThrus/assets/99392512/f7c10d75-863c-42d5-bdb9-956b06d53f67)
+
 
 In the screenshot above, you can see the DNS entry we created. Below you can see the runtime stack we configured as well. 
 
-![Alt text](image-4.png)
+![image](https://github.com/apsessoms/AzureAdminWalkThrus/assets/99392512/f395ee3b-2c0e-497f-bc02-1356a496de4d)
+
 
 ### View Status of Configuration
 
 If you go and click on the link that has been created for us based on the DNS entry that we configured in previous steps, you should see screen like this:
 
-![Alt text](image-5.png)
+![image](https://github.com/apsessoms/AzureAdminWalkThrus/assets/99392512/9cea2aa0-a510-4ec5-b5cd-ac5851d7db4e)
+
 
 It will show you the boiler plate Python code that Microsoft has provided and a quick status message. 
 
@@ -53,7 +58,8 @@ It will show you the boiler plate Python code that Microsoft has provided and a 
 
 1. **Click on Custom Domain**: Click the + sign for Add custom domain. Type in the custom name that you want. 
 
-![Alt text](image-7.png)
+![image](https://github.com/apsessoms/AzureAdminWalkThrus/assets/99392512/6e77035e-1bcc-4b43-b659-4098f894281b)
+
 
 This will provide you all of the details that you need to add this to a DNS provider. 
 *By default* it will give you a CNAME record which means your website will start with www but if you wanted a root or APEX level custom domain, you would use an A record. 
@@ -68,7 +74,8 @@ https://learn.microsoft.com/en-us/azure/dns/dns-getstarted-portal
 ### Step 6: Validate DNS Records ⚙️
 1. Once you are finished with creating a custom domain, click on validate. If successful, you should see two green check marks:
   
-![Alt text](image-8.png)
+![image](https://github.com/apsessoms/AzureAdminWalkThrus/assets/99392512/547ec75d-0e3a-4100-b37d-f65c82a7c0dc)
+
 
 This verifies that it was able to look up the DNS records in your DNS provider and it is ready to go. 
 
