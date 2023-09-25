@@ -11,7 +11,8 @@ Think of this as creating the underlying infrastructure for the Web Application,
 ### Step 3: Configure Your Web App 🛠️
 1. **Subscription**: Choose your subscription plan.
 
-![image](https://github.com/apsessoms/AzureAdminWalkThrus/assets/99392512/9d175797-c0ff-4cfb-bfa2-a8ada4cd34e2)
+![image](https://github.com/apsessoms/AzureAdminWalkThrus/assets/99392512/22e0e928-85a1-4cf7-a793-7e67302b5bfb)
+
 
 
 
