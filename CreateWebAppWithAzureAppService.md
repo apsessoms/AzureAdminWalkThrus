@@ -105,7 +105,7 @@ Think of this as creating the underlying infrastructure for the Web Application,
 ### Step 3: Configure Your Web App 🛠️
 1. **Subscription**: Choose your subscription plan.
 
-![Alt text](image-1.png)
+![image](https://github.com/apsessoms/AzureAdminWalkThrus/assets/99392512/ab85e67f-54f9-4c1d-989f-8355f82d0f8d)
 
 
 2. **Resource Group**: Click on "Create new" and give it a name, or select an existing one.
@@ -160,7 +160,7 @@ For the purpose of this lab, we will use a CNAME record.
 https://learn.microsoft.com/en-us/azure/dns/dns-getstarted-portal
 
 
-### Step 6: Validate DNS Records ⚙️
+### Validate DNS Records ⚙️
 1. Once you are finished with creating a custom domain, click on validate. If successful, you should see two green check marks:
   
 ![Alt text](image-8.png)
@@ -171,7 +171,7 @@ This verifies that it was able to look up the DNS records in your DNS provider a
 ### Summary 🎉
 We have configured an Azure App Service Plan. Deployed a Web App to the Web Service Plan using the Python runtime environment. We also configured a custom domain. 
 
-### Step 8: Visit Your Web App 🌐
+### Visit Your Web App 🌐
 1. Go to the "Resource groups" in the Azure portal.
 2. Click on your resource group.
 3. Click on your web app name.
