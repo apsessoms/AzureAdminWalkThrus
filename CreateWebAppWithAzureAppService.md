@@ -1,14 +1,14 @@
 <<<<<<< HEAD
-### Step 1: Set Up Your Azure Account 🌐
+### Set Up Your Azure Account 🌐
 If you don't have an Azure account yet, sign up at [Azure Portal](https://portal.azure.com). If you have an account, log in!
 
-### Step 2: Navigate to Azure App Services 
+### Navigate to Azure App Services 
 Think of this as creating the underlying infrastructure for the Web Application, not actually building the app itself. We will just be building the components.
 1. Click on the ☰ hamburger menu in the top-left corner.
 2. Select "Create a resource."
 3. Click on "App Service Plan."
 
-### Step 3: Configure Your Web App 🛠️
+### Configure Your Web App 🛠️
 1. **Subscription**: Choose your subscription plan.
 
 ![image](https://github.com/apsessoms/AzureAdminWalkThrus/assets/99392512/22e0e928-85a1-4cf7-a793-7e67302b5bfb)
@@ -22,7 +22,7 @@ Think of this as creating the underlying infrastructure for the Web Application,
 5. **Runtime Stack**: Choose the coding language and version you want to use (e.g., .NET, Node.js).
 6. **Region**: Pick a region close to you or your target audience.
 
-### Step 4: Select App Service Plan and Sku 📝
+### Select App Service Plan and Sku 📝
 1. Click on "Explore pricing plans" under the **Pricing Tier**.
 
 ![image](https://github.com/apsessoms/AzureAdminWalkThrus/assets/99392512/8168b7a3-ec7f-49a3-8c85-d95595d2cbfd)
@@ -73,7 +73,7 @@ For the purpose of this lab, we will use a CNAME record.
 https://learn.microsoft.com/en-us/azure/dns/dns-getstarted-portal
 
 
-### Step 6: Validate DNS Records ⚙️
+### Validate DNS Records ⚙️
 1. Once you are finished with creating a custom domain, click on validate. If successful, you should see two green check marks:
   
 ![image](https://github.com/apsessoms/AzureAdminWalkThrus/assets/99392512/547ec75d-0e3a-4100-b37d-f65c82a7c0dc)
@@ -85,7 +85,7 @@ This verifies that it was able to look up the DNS records in your DNS provider a
 ### Summary 🎉
 We have configured an Azure App Service Plan. Deployed a Web App to the Web Service Plan using the Python runtime environment. We also configured a custom domain. 
 
-### Step 8: Visit Your Web App 🌐
+### Visit Your Web App 🌐
 1. Go to the "Resource groups" in the Azure portal.
 2. Click on your resource group.
 3. Click on your web app name.
@@ -93,16 +93,16 @@ We have configured an Azure App Service Plan. Deployed a Web App to the Web Serv
 
 Congratulations, you've created a web app using Azure App Service Plan! 🥳 Now you can customize it as you wish and start building something awesome. If you encounter any issues or have further questions, the [Azure documentation](https://docs.microsoft.com/en-us/azure/app-service/) is a great resource.
 =======
-### Step 1: Set Up Your Azure Account 🌐
+### Set Up Your Azure Account 🌐
 If you don't have an Azure account yet, sign up at [Azure Portal](https://portal.azure.com). If you have an account, log in!
 
-### Step 2: Navigate to Azure App Services 
+### Navigate to Azure App Services 
 Think of this as creating the underlying infrastructure for the Web Application, not actually building the app itself. We will just be building the components.
 1. Click on the ☰ hamburger menu in the top-left corner.
 2. Select "Create a resource."
 3. Click on "App Service Plan."
 
-### Step 3: Configure Your Web App 🛠️
+### Configure Your Web App 🛠️
 1. **Subscription**: Choose your subscription plan.
 
 ![image](https://github.com/apsessoms/AzureAdminWalkThrus/assets/99392512/ab85e67f-54f9-4c1d-989f-8355f82d0f8d)
@@ -114,7 +114,7 @@ Think of this as creating the underlying infrastructure for the Web Application,
 5. **Runtime Stack**: Choose the coding language and version you want to use (e.g., .NET, Node.js).
 6. **Region**: Pick a region close to you or your target audience.
 
-### Step 4: Select App Service Plan and Sku 📝
+### Select App Service Plan and Sku 📝
 1. Click on "Explore pricing plans" under the **Pricing Tier**.
 
 ![Alt text](image-2.png)
