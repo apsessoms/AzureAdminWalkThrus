@@ -35,7 +35,8 @@ Step 2: Create a New Resource
 Click on the + Create a resource button.
 Search for "Network Security Group" and select it.
 
-![Alt text](image-10.png)
+![image](https://github.com/apsessoms/AzureAdminWalkThrus/assets/99392512/5123104c-f606-4522-a416-b5a9360ad23a)
+
 
 Step 3: Configure NSG
 Select your Subscription and Resource Group.
