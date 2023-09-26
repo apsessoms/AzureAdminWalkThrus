@@ -25,7 +25,7 @@ Think of this as creating the underlying infrastructure for the Web Application,
 ### Select App Service Plan and Sku 📝
 1. Click on "Explore pricing plans" under the **Pricing Tier**.
 
-![image](https://github.com/apsessoms/AzureAdminWalkThrus/assets/99392512/8168b7a3-ec7f-49a3-8c85-d95595d2cbfd)
+![image](https://github.com/apsessoms/AzureAdminWalkThrus/assets/99392512/e81d2f73-4923-45cf-8705-7cc91ac91f0e)
 
 
 2. You can choose a dev/test plan or a production plan, depending on your needs. For this lab, we will choose Basic B1 to keep costs low. 
@@ -38,20 +38,21 @@ Think of this as creating the underlying infrastructure for the Web Application,
 3. **Region**: It is always best to deploy apps to the same application service plan, and the same resource group, and they have to be in the region. 
 4. **Create**: Click review and create. 
 
-![image](https://github.com/apsessoms/AzureAdminWalkThrus/assets/99392512/f7c10d75-863c-42d5-bdb9-956b06d53f67)
+![image](https://github.com/apsessoms/AzureAdminWalkThrus/assets/99392512/e8e7bb14-101e-4291-acb7-fb9e508e85a6)
+
 
 
 In the screenshot above, you can see the DNS entry we created. Below you can see the runtime stack we configured as well. 
 
-![image](https://github.com/apsessoms/AzureAdminWalkThrus/assets/99392512/f395ee3b-2c0e-497f-bc02-1356a496de4d)
+![image](https://github.com/apsessoms/AzureAdminWalkThrus/assets/99392512/fe4ab4d1-e201-4bef-a4df-87e06b6aa835)
+
 
 
 ### View Status of Configuration
 
 If you go and click on the link that has been created for us based on the DNS entry that we configured in previous steps, you should see screen like this:
 
-![image](https://github.com/apsessoms/AzureAdminWalkThrus/assets/99392512/9cea2aa0-a510-4ec5-b5cd-ac5851d7db4e)
-
+![image](https://github.com/apsessoms/AzureAdminWalkThrus/assets/99392512/f5352b98-7b0f-470b-97be-1df7f621218b)
 
 It will show you the boiler plate Python code that Microsoft has provided and a quick status message. 
 
