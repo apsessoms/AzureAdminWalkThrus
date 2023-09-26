@@ -15,7 +15,8 @@ Did you know that when you create Network Security Groups in #Azure there are ru
 
 Look at the bottom rule of Inbound Security Rules. Unless you have another rule configured (like the one picture with the caution symbol next to it), all traffic will be denied. 🚫
 
-![Alt text](image-9.png)
+![image](https://github.com/apsessoms/AzureAdminWalkThrus/assets/99392512/28c5671f-833d-4dad-b4cd-696e33d2810c)
+
 
 By default, there are rules in the inbound & outbound rules that allow connectivity between virtual networks and subnets. There is also a rule for an Azure Load Balancer because if you associate a load balancer with a device within your network you typically want that traffic to be allowed. ✅
 
