@@ -1,4 +1,4 @@
-<<<<<<< HEAD
+
 ### Set Up Your Azure Account 🌐
 If you don't have an Azure account yet, sign up at [Azure Portal](https://portal.azure.com). If you have an account, log in!
 
