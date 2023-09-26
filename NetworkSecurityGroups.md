@@ -15,8 +15,7 @@ Did you know that when you create Network Security Groups in #Azure there are ru
 
 Look at the bottom rule of Inbound Security Rules. Unless you have another rule configured (like the one picture with the caution symbol next to it), all traffic will be denied. 🚫
 
-![image](https://github.com/apsessoms/AzureAdminWalkThrus/assets/99392512/28c5671f-833d-4dad-b4cd-696e33d2810c)
-
+![image](https://github.com/apsessoms/AzureAdminWalkThrus/assets/99392512/f8deba72-0c93-4161-8589-6c710a9a5664)
 
 By default, there are rules in the inbound & outbound rules that allow connectivity between virtual networks and subnets. There is also a rule for an Azure Load Balancer because if you associate a load balancer with a device within your network you typically want that traffic to be allowed. ✅
 
@@ -35,8 +34,7 @@ Step 2: Create a New Resource
 Click on the + Create a resource button.
 Search for "Network Security Group" and select it.
 
-![image](https://github.com/apsessoms/AzureAdminWalkThrus/assets/99392512/5123104c-f606-4522-a416-b5a9360ad23a)
-
+![image](https://github.com/apsessoms/AzureAdminWalkThrus/assets/99392512/875ca567-a771-419c-9272-114c518e1bc2)
 
 Step 3: Configure NSG
 Select your Subscription and Resource Group.
@@ -52,7 +50,8 @@ Click on your newly created NSG. Here in the overview section under the essentia
 Navigate to Settings -> Inbound security rules.
 Click on + Add. For this example, we will add allow SSH inbound connections. Please note this is a controlled lab environment and you should never allow the source to be "Any", but for the sake of saving time, I am going to use Any as the source. 
 
-![Alt text](image-11.png)
+![image](https://github.com/apsessoms/AzureAdminWalkThrus/assets/99392512/97bdbe97-98b3-4bd9-8ab2-594c5dd8d20d)
+
 
 **You can't remove the default security rules, but you can override them by creating another rule with a higher priority setting.**
 
@@ -60,19 +59,21 @@ Click on + Add. For this example, we will add allow SSH inbound connections. Ple
 
 - **Source:** the source will identify how the controls inbound traffic. It can be a specific IP address, any resource, IP address range, application security group, or a default tag that is allowed or denied. 
 
-![Alt text](image-15.png)
+![image](https://github.com/apsessoms/AzureAdminWalkThrus/assets/99392512/da298a3e-145f-4055-a7ca-544570873c28)
+
 
 - **Destination:** the destination will identify how the rule controls outbound traffic. It can be specified as a destination IP address, any resource, IP address range, app application security group, or a default tag that is allowed or denied. 
 
-![Alt text](image-12.png)
+![image](https://github.com/apsessoms/AzureAdminWalkThrus/assets/99392512/4b162ca1-0430-4f2b-b287-dabb008d6ec8)
 
 - **Service:** the service will identify the destination protocol and port ranges for the security rule. There are services you can pick, or you can choose predefined ones like RDP or SSH or even use custom port ranges. 
 
-![Alt text](image-16.png)
+![image](https://github.com/apsessoms/AzureAdminWalkThrus/assets/99392512/52fe6937-cb62-4148-81fa-22a525bd6198)
 
 - **Priority:** the priority will assign an order value for the security rule. The lower the number....the higher the priorty. Rules are processes according to their priority order. 
 
-![Alt text](image-17.png)
+![image](https://github.com/apsessoms/AzureAdminWalkThrus/assets/99392512/7e321dfb-3aad-4996-b725-bbda5bc56838)
+
 
 After entering the rule details such as Source, Destination, Ports, Action, etc. click Add. Outbound rules in Microsoft Azure control and manage outgoing network traffic from resources running in your Azure environment. They are essential for ensuring network security, compliance, and resource management. 
 
@@ -82,7 +83,7 @@ Click on + Add.
 Enter the rule details similar to inbound rules.
 Click Add.
 
-![Alt text](image-18.png)
+![image](https://github.com/apsessoms/AzureAdminWalkThrus/assets/99392512/e9ecef03-f2f4-41a0-8de9-684fb43f58e5)
 
 🔑 Key Points to remember:
 
