@@ -164,7 +164,8 @@ https://learn.microsoft.com/en-us/azure/dns/dns-getstarted-portal
 ### Validate DNS Records ⚙️
 1. Once you are finished with creating a custom domain, click on validate. If successful, you should see two green check marks:
   
-![Alt text](image-8.png)
+![image](https://github.com/apsessoms/AzureAdminWalkThrus/assets/99392512/b155c6fc-abef-465f-be1f-04f10440979e)
+
 
 This verifies that it was able to look up the DNS records in your DNS provider and it is ready to go. 
 
