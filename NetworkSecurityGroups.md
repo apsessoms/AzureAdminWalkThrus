@@ -1,93 +1,84 @@
-# Creating Network Security Groups
+# 🌐 Network Security Groups and Application Security Groups
+In this walkthrough, we'll set up a virtual networking infrastructure and deploy virtual machines to test the network filters. 🖥️ 
 
-This guide will walk you through the process of creating and configuring Network Security Groups (NSGs) in Microsoft Azure. 📝
+![Alt text](image-2.png)
 
-## Prerequisites
+## Task 1: 🛠️ Create a Virtual Networking Infrastructure
+1. Sign into https://portal.azure.com 🌍
+2. In the search bar, type "Virtual Network" and hit enter. 🔍
+3. On the **Virtual Network blade**, click + Create 🆕
 
-- An active Azure subscription.
-- Basic understanding of networking concepts.
+![Alt text](image-3.png)
 
-## Overview
+4.	On this page, specify the following settings and leave the others with their default values. 
+   -	Subscription: The name of the subscription you are using
+   -	Resource group: click create new and name accordingly 
+   -    Name: myVirtualNetwork
+   -    Region: East US 
+5.	Click on the **IP Addresses** tab and set the IPv4 space to **10.0.0.0/16** and if needed in the Subnet name column, click **Default**, on the Edit Subnet blade, specify the following settings and click Save.💾
 
-Network Security Groups (NSGs) act as a virtual firewall for your network resources in Azure, controlling inbound and outbound traffic. NSGs use rules similar to ACLs (Access Control Lists) to allow or deny specific traffic. 
+![Alt text](image-4.png)
 
-Did you know that when you create Network Security Groups in #Azure there are rules created by **default?** If you want to override any of these rules, you will have to use <u>priority</u> to do so. Let's break it down. 🔨
+6.	On the **Review + Create** tab, click on Create. Wait for the template to be deployed.⏳
 
-Look at the bottom rule of Inbound Security Rules. Unless you have another rule configured (like the one picture with the caution symbol next to it), all traffic will be denied. 🚫
+![Alt text](image-5.png)
 
-![image](https://github.com/apsessoms/AzureAdminWalkThrus/assets/99392512/f8deba72-0c93-4161-8589-6c710a9a5664)
+## Task 2: 🛡️ Create Application Security Groups
 
-By default, there are rules in the inbound & outbound rules that allow connectivity between virtual networks and subnets. There is also a rule for an Azure Load Balancer because if you associate a load balancer with a device within your network you typically want that traffic to be allowed. ✅
+1.	In the search bar, type "Application security groups" and press the enter. 🔍
+2.	Click on the + Create button and on the basics tab, specify the following settings:
+- Resource Group: use the same resource group you created in the previous task
+- Name: myAsgWebServer
+- Region: East US 📍
 
-Under Outbound security rules, we have "Allowinternetoutbound" which means by default you will get traffic that is allowed to the internet. ✅
+![Alt text](image-6.png)
 
-There are two default deny all inbound & outbound rules. This is key to what an NSG does because it blocks everything except for what you allow to pass. If these two default rules that are denying all inbound and outbound traffic were not absent, then the NSG would not really be doing that much.
+3.	Click on **Review + Create** and wait for the validation to pass. Then click create.✅
+4.	Navigate back to the **Application Security Group** and create another Security Group by clicking on the + Create button 🆕
+5.	Specify the following settings:
+- Resource Group: use the same resource group you created in the previous task
+- Name: myAsgMgmtServer
+- Region: East US 📍
+6.	Click on **Review + Create** and wait for the validation to pass. Then click create.✅ 
+7.	You should now see two application security groups.👀
 
-This is a lot easier than manually inputting everything that you would allow, right? 😁
+![Alt text](image-7.png)
 
-## Creating a Network Security Group
+## Task 3: 🚦 Create a Network Security Group and Associate the NSG to the Subnet
+1.	In the search bar, type **Network Security Group** and click enter.🔍 
+2.	Create a new NSG and specify the following settings: 
+- Subscription: the name of the subscription you want to use📝
+- Resource Group: use the same resource group you created in the previous task
+- Name: myNsg
+- Region: East US 📍
+3.	Click on **Review + Create** and wait for the validation to pass. Then click create.✅
+4.	Go back into your Network Security Group by clicking on **“myNsg”**
+5.	Under Settings in the left navigation panel, click on **Subnets** 
 
-Step 1: Log into Azure Portal
-Navigate to Azure Portal and log in with your credentials.
+![Alt text](image-8.png)
 
-Step 2: Create a New Resource
-Click on the + Create a resource button.
-Search for "Network Security Group" and select it.
+6.	Click on + Associate and specify the following settings: 
+- Virtual Network: myVirtualNetwork
+- 	Subnet: default
+7.	Click on **OK.**
 
-![image](https://github.com/apsessoms/AzureAdminWalkThrus/assets/99392512/875ca567-a771-419c-9272-114c518e1bc2)
+![Alt text](image-9.png)
 
-Step 3: Configure NSG
-Select your Subscription and Resource Group.
-Enter a name for the NSG.
-Choose a region.
-Click on Review + Create.
+## Task 4: 🛡️Create inbound NSG security rules to all traffic to web servers and RDP to the servers.
+1.	On the **myNsg** blade, click on **inbound security rules.**👆
+2.	Review the default inbound security rules and click + Add
 
-## Assigning Rules
+![Alt text](image-10.png)
 
-<U>Inbound Rules:</u>
-Click on your newly created NSG. Here in the overview section under the essentials, you can see a quick rundown of the subnets & network interfaces your NSG is associated with as well as any custom security rules. As I mentioned earlier, this is also where you will see the default inbound and outbound rules that are created by Microsoft. 
+3.	Specify the following settings to allow TCP ports 80 and 443 to the myAsgWebServers application security group and leave all other values with their default values. 
 
-Navigate to Settings -> Inbound security rules.
-Click on + Add. For this example, we will add allow SSH inbound connections. Please note this is a controlled lab environment and you should never allow the source to be "Any", but for the sake of saving time, I am going to use Any as the source. 
+![Alt text](image-11.png)
 
-![image](https://github.com/apsessoms/AzureAdminWalkThrus/assets/99392512/97bdbe97-98b3-4bd9-8ab2-594c5dd8d20d)
+4.	Click on + Add to create the new inbound rule. Now we are going to create another inbound security rule.🚧
+5.	Click on + Add and specify the following settings to allow the RDP port (TCP 3389) to the myAsgMgmtServers application security group and leave all other values with their default values. 
 
+![Alt text](image-12.png)
 
-**You can't remove the default security rules, but you can override them by creating another rule with a higher priority setting.**
+6.	Click on add to create the new inbound rule. 
 
-## Properties to specify for security rules
-
-- **Source:** the source will identify how the controls inbound traffic. It can be a specific IP address, any resource, IP address range, application security group, or a default tag that is allowed or denied. 
-
-![image](https://github.com/apsessoms/AzureAdminWalkThrus/assets/99392512/da298a3e-145f-4055-a7ca-544570873c28)
-
-
-- **Destination:** the destination will identify how the rule controls outbound traffic. It can be specified as a destination IP address, any resource, IP address range, app application security group, or a default tag that is allowed or denied. 
-
-![image](https://github.com/apsessoms/AzureAdminWalkThrus/assets/99392512/4b162ca1-0430-4f2b-b287-dabb008d6ec8)
-
-- **Service:** the service will identify the destination protocol and port ranges for the security rule. There are services you can pick, or you can choose predefined ones like RDP or SSH or even use custom port ranges. 
-
-![image](https://github.com/apsessoms/AzureAdminWalkThrus/assets/99392512/52fe6937-cb62-4148-81fa-22a525bd6198)
-
-- **Priority:** the priority will assign an order value for the security rule. The lower the number....the higher the priorty. Rules are processes according to their priority order. 
-
-![image](https://github.com/apsessoms/AzureAdminWalkThrus/assets/99392512/7e321dfb-3aad-4996-b725-bbda5bc56838)
-
-
-After entering the rule details such as Source, Destination, Ports, Action, etc. click Add. Outbound rules in Microsoft Azure control and manage outgoing network traffic from resources running in your Azure environment. They are essential for ensuring network security, compliance, and resource management. 
-
-<u>Outbound Rules:</U>
-Navigate to Settings -> Outbound security rules. Here you will see the three rules that were created by default by Microsoft and their priorities. 
-Click on + Add.
-Enter the rule details similar to inbound rules.
-Click Add.
-
-![image](https://github.com/apsessoms/AzureAdminWalkThrus/assets/99392512/e9ecef03-f2f4-41a0-8de9-684fb43f58e5)
-
-🔑 Key Points to remember:
-
-- The security rules for a network security group are processed in priority order. 
-- When an NSG is created, Azure creates the default security rule "DenyAllInbound" for the group.
-- NSG inbound rules for a subnet in a VM take precedence over NSG inbound rules for a NIC in the same VM.
-
+**Summary**: You've successfully deployed a virtual network, network security with inbound security rules, and two application security groups. Great job! 🎉
