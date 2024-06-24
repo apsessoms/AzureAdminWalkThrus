@@ -16,7 +16,9 @@ The Azure cloud shell is a shell environment run directly from the Azure portal.
 + https://shell.azure.com
 + Click on the Cloud Shell icon in the Azure portal
 
-![alt text](image-2.png)
+![image](https://github.com/apsessoms/AzureAdminWalkThrus/assets/99392512/bb39eb08-70a1-4c8b-8fcc-840e92bbb0ef)
+
+
 
 ## First time setup 🛠
 
