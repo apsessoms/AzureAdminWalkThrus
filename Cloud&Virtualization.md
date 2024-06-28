@@ -5,7 +5,8 @@
 Virtualization is the ability to abstract/seperate the operating system (OS) from the physical hardware. To create a virtual computer, your physical hardware (laptop or PC) needs to be **shared** with the virtual computer. The hypervisor is the tool that allows you to share your physical hardware with the virtual computer. 
 
 
-![alt text](image-3.png)
+![image](https://github.com/apsessoms/AzureAdminWalkThrus/assets/99392512/add9facb-56ca-4498-98ac-99e2dae0b722)
+
 
 There are two types of hypervisors: Type 1 and Type 2.
 + **Type 1:** Bare Metal Hypervisor (runs directly on the hardware)
@@ -28,7 +29,8 @@ There are two types of hypervisors: Type 1 and Type 2.
 ## Quick history of server technology 
 Enterprise servers consisted of a single server that ran a single application (Windows Server or Linux Server). This was installed on specific hardware and was not shared with other applications. All server RAM, processing power, and storage was dedicated to that single application. 
 
-![alt text](image-4.png)    
+![image](https://github.com/apsessoms/AzureAdminWalkThrus/assets/99392512/f9a38f46-8539-4fd7-84f3-9d162482975e)
+
 
 The problem with this setup was that the servers were underutilized, only using about 10-15% of their resources. This was a waste of resources and money. The major problem with this configuration is that when a component failed, the entire server went down. This is commonly referred to as a "**single point of failure**". 
 
