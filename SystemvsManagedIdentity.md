@@ -39,7 +39,9 @@ A User Assigned Identity is an independent Azure resource that can be assigned t
    - In the left-hand menu, select `Security`.
    - Under `System assigned`, switch the status to `On`.
    - The object principal ID is a unique identifier for this resource. It can also be referred to as an object identifier.
-   ![alt text](image-4.png)
+   - 
+ ![image](https://github.com/user-attachments/assets/255100d9-8e2b-45ac-8e31-334d5203137c)
+
 
 That's it! The system-assigned identity is now enabled for your Azure resource.
 
@@ -49,13 +51,15 @@ That's it! The system-assigned identity is now enabled for your Azure resource.
 - Place the managed identity in the appropriate resource group.
 - Give it a name and click on `Review + Create`.
 
-![alt text](image-6.png)
+![image](https://github.com/user-attachments/assets/460a2651-fd70-4150-b656-12686eb9fc83)
+
 - Navigate to the Azure resource for which you want to assign a user-assigned identity.
 - In the left-hand menu, select `Identity`.
 - Under `User assigned`, click on `Add`.
 - Type in the name of the user-assigned identity you created earlier and it should appear in the list. Select it and click `Save`.
 
-![alt text](image-5.png)
+![image](https://github.com/user-attachments/assets/c6708cc1-cf9d-4eda-92b4-87f4089499c0)
+
 
 That's it! The user-assigned identity is now assigned to your Azure resource.
 
