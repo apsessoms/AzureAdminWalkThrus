@@ -49,8 +49,7 @@ In this example, you will enforce the NIST SP 800-53 rev 5 policy on a resource 
     - **User-assigned** managed identity is created and managed by you.
 8. Choose your region and click **'review + create'.**
 
-![image](https://github.com/user-attachments/assets/18cdcb25-1dcc-4aec-9d60-7d9e6b863e23)
-
+![alt text](image-20.png)
 
 9. You should see a message from the notification center that the policy has been assigned successfully and the Role assignment is in progress. The role assignment is the process of applying the policy to the resources in the scope you selected.
 10. Verify that the policy is being enforced by checking the compliance status of the resources in the assigned scope.
@@ -61,8 +60,7 @@ In this example, you will enforce the NIST SP 800-53 rev 5 policy on a resource 
     - Azure Policy provides a compliance dashboard where you can see the compliance state of your resources.
     - Navigate to "Compliance" in the Azure Policy section to view the overall compliance status.
 
-![image](https://github.com/user-attachments/assets/322edb02-834b-480d-8c0d-26ffe3c54c6e)
-
+![alt text](image-21.png)
 
 2. **Alerts and Remediation:**
 
