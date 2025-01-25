@@ -11,7 +11,8 @@ Entra Connect is a tool that helps you integrate your on-premises directories wi
 ## Installation
 
 ### TLS 1.2 enforcement for Microsoft Entra Connect
-![alt text](image-25.png)
+![image](https://github.com/user-attachments/assets/59fa7bb3-fbdd-4173-9c18-858b66d2f1ac)
+
 
 1. **Download Entra Connect**
     - Go to the [Microsoft Download Center](https://www.microsoft.com/en-us/download) and download the latest version of Entra Connect.
